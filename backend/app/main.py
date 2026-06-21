@@ -33,4 +33,4 @@ def health():
 
 @app.post("/classificar-nictemeral", response_model=ClassificacaoNictemeralSaida)
 def classificar_nictemeral(medicao: MedicaoNictemeralEntrada):
-    return modelo_nictemeral_service.classificar(medicao.model_dump())
+    return modelo_nictemeral_service.classificar(medicao.dict())
