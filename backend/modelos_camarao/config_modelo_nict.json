@@ -1,0 +1,31 @@
+{
+    "tipo_modelo": "KMeans com PCA para interpretacao visual",
+    "base": "dados nictemerais de 24h",
+    "variaveis_entrada": [
+        "temperatura",
+        "ph",
+        "od",
+        "salinidade",
+        "condutividade",
+        "transparencia",
+        "hora_decimal"
+    ],
+    "mapa_estado_nictemeral": {
+        "0": "risco",
+        "1": "estavel",
+        "2": "atencao",
+        "3": "anomalia",
+        "4": "anomalia",
+        "5": "risco"
+    },
+    "mensagens": {
+        "estavel": "Condicao estavel dentro do padrao observado para o viveiro.",
+        "atencao": "Condicao fisico-quimica requer acompanhamento, apesar de OD adequado.",
+        "risco": "Risco de baixo oxigenio dissolvido. Intensificar monitoramento e verificar aeracao.",
+        "anomalia": "Registro atipico. Verificar possivel erro de medicao ou evento pontual."
+    },
+    "limiares_referencia": {
+        "od_critico_mg_l": 3,
+        "od_atencao_mg_l": 4
+    }
+}
